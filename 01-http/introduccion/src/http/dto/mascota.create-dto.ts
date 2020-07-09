@@ -1,0 +1,6 @@
+// @IsAlpha()
+// @IsNotEmpty()
+// @Min(min: number)
+// @Max(max: number)
+// @IsBoolean()
+// @IsEmpty()
