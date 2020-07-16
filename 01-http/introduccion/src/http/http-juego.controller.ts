@@ -9,7 +9,8 @@ import {
     Param,
     Post,
     Query,
-    Req, Res
+    Req, Res,
+    Headers
 } from "@nestjs/common";
 import {MascotaCreateDto} from "./dto/mascota.create-dto";
 import {validate, ValidationError} from "class-validator";
@@ -116,6 +117,49 @@ export class HttpJuegoController{
         res.send(mensaje);
     }
     // 1 Guardar cookie segura
-    // 2 Guardar cookie insegura
+    @Get("guardarCookieSegura")
+    guardarCookieSegura(
+        @Query() parametrosConsulta,
+        @Req() req, // peticion
+        @Res() res // Respuesta
+    ){
+        res.cookie(
+            "galletaSegura",
+            "Tengo hambre",
+            {
+                secure: true
+            }
+        );
+        const  mensaje = {
+            mensaje: "ok"
+        };
+        // return mensake // NO SE PUEDE UTILIZAR RETURN CUANDO SE USA @Res
+        res.send(mensaje);
+    }
+
     // 3 Mostrar Cookies
+    @Get("mostrarCookies")
+    mostrarCookies(
+        @Req() req
+    ){
+        const mensaje = {
+            sinFirmar: req.cookies,
+            firmadas: req.signedCookies
+        }
+        return mensaje;
+    }
+
+    @Get("guardarCookieFirmada")
+    public guardarCookieFirmada(
+        @Res() res,
+        @Headers() headers
+    ){
+        res.header("cabecera", "Cabecera");
+        res.cookie("Firmada", "Poliburguer", {signed: true})
+        const mensaje = {
+            mensaje: "ok"
+        };
+        res.send(mensaje);
+    }
 }
+
