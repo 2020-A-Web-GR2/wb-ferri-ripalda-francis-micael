@@ -1,19 +1,19 @@
-import {Body, Controller, Get, Param, Post} from "@nestjs/common";
+import {Body, Controller, Delete, Get, Param, Post, Put} from "@nestjs/common";
 
 @Controller("usuario")
 export class UsuarioController{
     // public palabra opcional
     public arregloUsuario = [
         {
-            id: 1,
+            id: 0,
             nombre: "Francis"
         },
         {
-            id: 2,
+            id: 1,
             nombre: "Micael"
         },
         {
-            id: 3,
+            id: 2,
             nombre: "Alberto"
         }
     ];
@@ -46,4 +46,28 @@ export class UsuarioController{
         );
         return this.arregloUsuario[indice];
     }
+    @Put(":id")
+    editarUno(
+        @Param() parametrosRuta,
+        @Body() parametrosCuerpo
+    ){
+        const indice = this.arregloUsuario.findIndex(
+            (usuario) => usuario.id === Number(parametrosRuta.id)
+        );
+        this.arregloUsuario[indice].nombre = parametrosCuerpo.nombre;
+        return this.arregloUsuario[indice];
+    }
+
+    @Delete(":id")
+    eliminarUno(
+        @Param() parametrosRuta
+    ){
+        const indice = this.arregloUsuario.findIndex(
+            (usuario) => usuario.id === Number(parametrosRuta.id)
+        );
+        this.arregloUsuario.splice(indice, 1);
+        return {mensaje: "Se ha borrado el usuario con indice: "+ indice};
+    }
+
+
 }
