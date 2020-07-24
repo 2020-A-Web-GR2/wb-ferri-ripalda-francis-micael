@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec75b51f-7945-4792-a8dc-f14663eff8ef" name="Default Changelist" comment="Deber calculadora">
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/nest-cli.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/src/app.controller.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/src/app.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/src/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/src/app.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/src/http/http-calculadora.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/src/http/http-calculadora.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/src/http/http-calculadora.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/test/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/test/jest-e2e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/tsconfig.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/Deberes/01-calculadora/calculadora/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/nest-cli.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/app.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/http/http-calculadora.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/http/http-calculadora.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/http/http-calculadora.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/test/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/test/jest-e2e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/tsconfig.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Deberes/01-calculadora/calculadora/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +22,7 @@
         <option value="Francis Ferri &lt;francis.ferri@epn.edu.ec&gt;" />
       </list>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Deberes/01-calculadora/calculadora" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1dVc3XmBQwZun0uMpp1eT0gTIrF" />
@@ -115,7 +78,8 @@
       <workItem from="1595469623842" duration="13330000" />
       <workItem from="1595531636837" duration="4848000" />
       <workItem from="1595539267135" duration="139000" />
-      <workItem from="1595539785326" duration="331000" />
+      <workItem from="1595539785326" duration="629000" />
+      <workItem from="1595617454404" duration="7109000" />
     </task>
     <task id="LOCAL-00001" summary="Deber calculadora">
       <created>1595540109787</created>
