@@ -15,8 +15,8 @@ import {
 import {MascotaCreateDto} from "./dto/mascota.create-dto";
 import {validate, ValidationError} from "class-validator";
 
-// http_//localhost:3001/juegos-http
-// /juegos-http
+// http_//localhost:3001/juegos-calculadora
+// /juegos-calculadora
 @ Controller('juegos-http')
 export class HttpJuegoController{
     @Get('hola')
@@ -146,6 +146,7 @@ export class HttpJuegoController{
             sinFirmar: req.cookies,
             firmadas: req.signedCookies
         }
+        console.log(mensaje);
         return mensaje;
     }
 

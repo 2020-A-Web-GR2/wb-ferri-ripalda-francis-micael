@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import {HttpCalculadoraModule} from "./http/http-calculadora.module";
+import {CalculadoraModule} from "./calculadora/calculadora.module";
 
 @Module({
   imports: [
-      HttpCalculadoraModule
+      CalculadoraModule
   ],
   controllers: [
       AppController
