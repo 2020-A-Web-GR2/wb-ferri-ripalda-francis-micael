@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec75b51f-7945-4792-a8dc-f14663eff8ef" name="Default Changelist" comment="Deber calculadora">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/franc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Base de datos/FixedBeams - base de datos.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Base de datos/base de datos.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/Enlace.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-001.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-002.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-003.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-004.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-005.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-006.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-007.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-008.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-009.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-010.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-011.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-012.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-013.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-014.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Historias de usuario/USER-015JPG.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Prototipos/Carrito.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Prototipos/Detalle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Prototipos/Enlaces.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Prototipos/Factura.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Prototipos/Ingreso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Prototipos/Principal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Prototipos/Registro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen primer bimestre/Prototipos/Ubicación.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +74,11 @@
     <property name="ts.external.directory.path" value="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael\Deberes\01-calculadora\calculadora\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael" />
       <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael\00-introduccion" />
     </key>
   </component>
@@ -85,6 +114,10 @@
       <workItem from="1595625182230" duration="128000" />
       <workItem from="1595633176025" duration="7735000" />
       <workItem from="1595641368030" duration="8559000" />
+      <workItem from="1596130636485" duration="532000" />
+      <workItem from="1596132474665" duration="9597000" />
+      <workItem from="1596157137658" duration="1565000" />
+      <workItem from="1596164374297" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="Deber calculadora">
       <created>1595540109787</created>
