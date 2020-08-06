@@ -17,9 +17,13 @@ import {UsuarioEntity} from "./usuario/usuario.entity";
               host: 'localhost', // ip
               port: 3306, // Puerto
               username: 'root', // usuario //TODO:
-              password: '', // Contraseña //TODO:
+              password: 'root', // Contraseña //TODO:
               database: 'test', //Base de datos
-              entities: [ // Todas las entidades
+              entities: [ // Todas las en
+
+
+
+                  // tidades
                   UsuarioEntity
               ],
               // NO SE RECOMIENDA UTILIZAR SINCRONIZE EN PRODUCION
