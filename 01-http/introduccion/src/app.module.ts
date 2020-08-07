@@ -14,13 +14,12 @@ import {UsuarioEntity} from "./usuario/usuario.entity";
           .forRoot({
               name: "default", // nombre de la conexion
               type: 'mysql',  // mysql postgres
-              host: 'localhost', // ip
+              host: '104.197.94.208', // ip
               port: 3306, // Puerto
               username: 'root', // usuario //TODO:
               password: 'root', // Contraseña //TODO:
               database: 'test', //Base de datos
               entities: [ // Todas las en
-
 
 
                   // tidades
