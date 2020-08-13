@@ -14,15 +14,12 @@ import {UsuarioEntity} from "./usuario/usuario.entity";
           .forRoot({
               name: "default", // nombre de la conexion
               type: 'mysql',  // mysql postgres
-              host: '104.197.94.208', // ip
+              host: '34.68.28.243', // ip
               port: 3306, // Puerto
               username: 'root', // usuario //TODO:
               password: 'root', // Contraseña //TODO:
               database: 'test', //Base de datos
-              entities: [ // Todas las en
-
-
-                  // tidades
+              entities: [ // Todas las entidades
                   UsuarioEntity
               ],
               // NO SE RECOMIENDA UTILIZAR SINCRONIZE EN PRODUCION
