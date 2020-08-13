@@ -1,4 +1,15 @@
-import {Body, Controller, Delete, Get, Param, Post, Put} from "@nestjs/common";
+import {
+    BadRequestException,
+    Body,
+    Controller,
+    Delete,
+    Get,
+    InternalServerErrorException, NotFoundException,
+    Param,
+    Post,
+    Put
+} from "@nestjs/common";
+import {UsuarioService} from "./usuario.service";
 
 @Controller("usuario")
 export class UsuarioController{
@@ -19,32 +30,75 @@ export class UsuarioController{
     ];
     public idActual = 3;
 
+    constructor(
+        private readonly _usuarioService: UsuarioService
+    ) {
+    }
     @Get()
-    mostrarTodas(){
-        return this.arregloUsuario;
+    async mostrarTodas(){
+        try{
+            const respuesta = await this._usuarioService.buscarTodos()
+            return respuesta;
+        } catch (e){
+            console.log(e)
+            throw new InternalServerErrorException({
+            mensaje: "Error del servidor"
+            })
+        }
     }
 
     @Post()
-    crearUno(
+    async crearUno(
         @Body() parametrosDeCuerpo
     ){
-        const nuevoUsuario = {
+        try{
+            // Validacion con DTO
+            const respuesta = await this._usuarioService.crearUno(parametrosDeCuerpo)
+            return respuesta
+        } catch(e){
+            console.error(e)
+            throw new BadRequestException({
+                mensaje: "Error validadndo datos"
+            });
+        }
+        /*const nuevoUsuario = {
             id: this.idActual + 1,
             nombre: parametrosDeCuerpo.nombre
         };
         this.arregloUsuario.push(nuevoUsuario);
         this.idActual = this.idActual + 1;
         return nuevoUsuario;
+         */
     }
     // Ver uno
     @Get(':id')
-    verUno(
+    async verUno(
         @Param() paraetrosDeRuta
     ){
+        let respuesta;
+        try{
+            respuesta = await this._usuarioService
+                .buscarUno(Number(paraetrosDeRuta.id))
+        } catch (e){
+            console.log(e)
+            throw new InternalServerErrorException({
+                mensaje: "Error del servidor"
+            })
+        }
+        if (respuesta){
+            return  respuesta;
+        } else {
+            throw  new NotFoundException({
+                mensaje: "No existen registros"
+            })
+        }
+        /*
         const indice = this.arregloUsuario.findIndex(
             (usuario) => usuario.id === Number(paraetrosDeRuta.id)
         );
         return this.arregloUsuario[indice];
+
+         */
     }
     @Put(":id")
     editarUno(
