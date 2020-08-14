@@ -14,7 +14,7 @@ import {UsuarioEntity} from "./usuario/usuario.entity";
           .forRoot({
               name: "default", // nombre de la conexion
               type: 'mysql',  // mysql postgres
-              host: '34.68.28.243', // ip
+              host: '34.66.70.106', // ip
               port: 3306, // Puerto
               username: 'root', // usuario //TODO:
               password: 'root', // Contraseña //TODO:

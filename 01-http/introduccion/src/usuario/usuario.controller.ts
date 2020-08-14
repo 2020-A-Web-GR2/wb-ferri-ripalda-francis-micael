@@ -101,26 +101,57 @@ export class UsuarioController{
          */
     }
     @Put(":id")
-    editarUno(
+    async editarUno(
         @Param() parametrosRuta,
         @Body() parametrosCuerpo
     ){
-        const indice = this.arregloUsuario.findIndex(
+        const id = Number(parametrosRuta.id);
+        const  usuarioEditado = parametrosCuerpo;
+        usuarioEditado.id = id;
+        try{
+            const respuesta = await this._usuarioService
+                .editarUno(usuarioEditado)
+            return  respuesta;
+        } catch (e){
+            console.log(e)
+            throw new InternalServerErrorException({
+                mensaje: "Error del servidor"
+            })
+        }
+        /*const indice = this.arregloUsuario.findIndex(
             (usuario) => usuario.id === Number(parametrosRuta.id)
         );
         this.arregloUsuario[indice].nombre = parametrosCuerpo.nombre;
         return this.arregloUsuario[indice];
+
+         */
     }
 
     @Delete(":id")
-    eliminarUno(
+    async eliminarUno(
         @Param() parametrosRuta
     ){
+        const id = Number(parametrosRuta.id);
+        try{
+            const respuesta = await this._usuarioService
+                .eliminarUno(id)
+            return  {
+                mensaje: "Regstro con id: " + id + "eliminado"
+            };
+        } catch (e){
+            console.log(e)
+            throw new InternalServerErrorException({
+                mensaje: "Error del servidor"
+            })
+        }
+        /*
         const indice = this.arregloUsuario.findIndex(
             (usuario) => usuario.id === Number(parametrosRuta.id)
         );
         this.arregloUsuario.splice(indice, 1);
         return {mensaje: "Se ha borrado el usuario con indice: "+ indice};
+
+         */
     }
 
 
