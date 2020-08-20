@@ -16,11 +16,11 @@ export class MascotaEntity{
     )
     usuario: UsuarioEntity;
 
+
     @OneToMany(
         type => VacunaEntity,
         vacuna => vacuna.mascota
     )
     vacunas: VacunaEntity[];
-
 
 }

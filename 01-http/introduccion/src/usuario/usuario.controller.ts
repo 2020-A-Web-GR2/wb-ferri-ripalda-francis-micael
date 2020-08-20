@@ -7,9 +7,10 @@ import {
     InternalServerErrorException, NotFoundException,
     Param,
     Post,
-    Put
+    Put, Res
 } from "@nestjs/common";
 import {UsuarioService} from "./usuario.service";
+import {MascotaService} from "../mascota/mascota.service";
 
 @Controller("usuario")
 export class UsuarioController{
@@ -31,7 +32,8 @@ export class UsuarioController{
     public idActual = 3;
 
     constructor(
-        private readonly _usuarioService: UsuarioService
+        private readonly _usuarioService: UsuarioService,
+        private readonly _mascotaService: MascotaService
     ) {
     }
     @Get()
@@ -113,18 +115,11 @@ export class UsuarioController{
                 .editarUno(usuarioEditado)
             return  respuesta;
         } catch (e){
-            console.log(e)
+            console.error(e)
             throw new InternalServerErrorException({
                 mensaje: "Error del servidor"
             })
         }
-        /*const indice = this.arregloUsuario.findIndex(
-            (usuario) => usuario.id === Number(parametrosRuta.id)
-        );
-        this.arregloUsuario[indice].nombre = parametrosCuerpo.nombre;
-        return this.arregloUsuario[indice];
-
-         */
     }
 
     @Delete(":id")
@@ -136,7 +131,7 @@ export class UsuarioController{
             const respuesta = await this._usuarioService
                 .eliminarUno(id)
             return  {
-                mensaje: "Regstro con id: " + id + "eliminado"
+                mensaje: "Regstro con id: " + id + " eliminado"
             };
         } catch (e){
             console.log(e)
@@ -153,6 +148,65 @@ export class UsuarioController{
 
          */
     }
+    @Post("crearUsuarioYCrearMascota")
+    async crearUsuarioYCrearMascota(
+        @Body() parametrosCuerpo
+    ){
+        const usuario = parametrosCuerpo.usuario;
+        const mascota = parametrosCuerpo.mascota;
+        // Validadr usuario
+        // Validar mascota
+        let usuarioCreado;
+        try {
+            usuarioCreado = await this._usuarioService.crearUno(usuario);
+        } catch(e) {
+            console.error(e)
+            throw new InternalServerErrorException({
+                mensaje: "Error creando usuario"
+            })
+        }
+        if (usuarioCreado) {
+            mascota.usuario = usuarioCreado.id;
+            let mascotaCreada;
+            try {
+                mascotaCreada = await this._mascotaService.crearNuevaMascota(mascota)
+            } catch (e) {
+                console.error(e)
+                throw new InternalServerErrorException({
+                    mensaje: "Error creando usuaio"
+                })
+            }
+            if (mascotaCreada) {
+                return {
+                    mascota: mascotaCreada,
+                    usuario: usuarioCreado
+                }
+            } else {
+                throw new InternalServerErrorException({
+                    mensaje: "Error creando mascota"
+                })
+            }
+        } else {
+            throw new InternalServerErrorException({
+                mensaje: "Error creando usuario"
+            })
+        }
+
+    }
+
+    @Get("vista/usuario")
+    vistaUsuario(
+        @Res() res
+    ){
+        const nombreControlador = "Francis"
+        res.render(
+            "ejemplo", // Nombre de la vista
+            {// parametros de la vista
+                nombre: nombreControlador
+            }
+        )
+    }
 
 
 }
+

@@ -5,22 +5,33 @@ import {HttpJuegoModule} from "./http/http-juego.module";
 import {UsuarioModule} from "./usuario/usuario.module";
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {UsuarioEntity} from "./usuario/usuario.entity";
+import {MascotaModule} from "./mascota/mascota.module";
+import {VacunaModule} from "./vacuna/vacuna.module";
+import {MascotaEntity} from "./mascota/mascota.entity";
+import {VacunaEntity} from "./vacuna/vacuna.entity";
+
+const IP = "34.121.254.64";
+
 
 @Module({
   imports: [
       HttpJuegoModule,
       UsuarioModule,
+      MascotaModule,
+      VacunaModule,
       TypeOrmModule
           .forRoot({
               name: "default", // nombre de la conexion
               type: 'mysql',  // mysql postgres
-              host: '34.66.70.106', // ip
+              host: IP, // ip
               port: 3306, // Puerto
               username: 'root', // usuario //TODO:
               password: 'root', // Contraseña //TODO:
               database: 'test', //Base de datos
               entities: [ // Todas las entidades
-                  UsuarioEntity
+                  UsuarioEntity,
+                  VacunaEntity,
+                  MascotaEntity
               ],
               // NO SE RECOMIENDA UTILIZAR SINCRONIZE EN PRODUCION
               synchronize: true, // Actualiza el esquema de la base de datos
