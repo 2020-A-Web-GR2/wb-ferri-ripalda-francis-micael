@@ -67,11 +67,16 @@ export class UsuarioEntity{
     })
     fechaHoraNacimiento?: string;
 
+
     @OneToMany(
-        type => MascotaEntity,
-        // Que entidad ns relacionamos
-        mascota => mascota.usuario
-        // Campo con el q relacionamos
+        type => MascotaEntity, // Con que entidad nos relacionamos
+        mascota => mascota.usuario // Campo con el q relacionamos
     )
     mascotas: MascotaEntity[];
+
 }
+
+
+
+
+

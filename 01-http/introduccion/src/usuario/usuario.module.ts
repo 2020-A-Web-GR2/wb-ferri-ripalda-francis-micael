@@ -3,15 +3,17 @@ import {UsuarioController} from "./usuario.controller";
 import {UsuarioService} from "./usuario.service";
 import {UsuarioEntity} from "./usuario.entity";
 import {TypeOrmModule} from "@nestjs/typeorm";
+import {MascotaModule} from "../mascota/mascota.module";
 
 @Module({
     imports: [
+        MascotaModule,
         TypeOrmModule.forFeature(
                 [
                     UsuarioEntity
                 ],
                 "default"
-            )
+            ),
     ],
     controllers: [
         UsuarioController
