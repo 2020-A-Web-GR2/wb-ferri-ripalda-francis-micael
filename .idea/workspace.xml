@@ -36,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/01-http/introduccion/publico/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,12 +48,14 @@
     <property name="ts.external.directory.path" value="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael\Deberes\01-calculadora\calculadora\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael" />
       <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael\00-introduccion" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael\01-http\introduccion\publico\js" />
+      <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael\01-http\introduccion\publico" />
+      <recent name="D:\Octavo semestre\Aplicaciones web\Repositorios\wb-ferri-ripalda-francis-micael" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -105,6 +107,7 @@
       <workItem from="1597436032217" duration="2452000" />
       <workItem from="1597888427846" duration="7840000" />
       <workItem from="1597951145639" duration="5252000" />
+      <workItem from="1598037288305" duration="5216000" />
     </task>
     <task id="LOCAL-00001" summary="Deber calculadora">
       <created>1595540109787</created>

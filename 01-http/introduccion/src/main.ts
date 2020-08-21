@@ -11,7 +11,7 @@ async function bootstrap() {
   * */
   app.use(cookieParser("Me agradan los poliperros"));
   app.set("view engine", "ejs");
-  app.use(express.static("public"));
+  app.use(express.static("publico"));
   await app.listen(3001);
 }
 bootstrap();
