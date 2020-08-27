@@ -11,6 +11,9 @@ import {
 } from "@nestjs/common";
 import {UsuarioService} from "./usuario.service";
 import {MascotaService} from "../mascota/mascota.service";
+import { UsuarioCreateDto } from "./dto/usuario.create.dto";
+import { ValidationError, validate } from "class-validator";
+import { UsuarioUpdateDto } from './dto/usuario.update.dto';
 
 @Controller("usuario")
 export class UsuarioController{
@@ -53,10 +56,28 @@ export class UsuarioController{
     async crearUno(
         @Body() parametrosDeCuerpo
     ){
+        // Validacion con DTO Create
+        let usuarioValido = new UsuarioCreateDto();
+        usuarioValido.nombre = parametrosDeCuerpo.nombre;
+        usuarioValido.apellido = parametrosDeCuerpo.apellido;
+        usuarioValido.cedula = parametrosDeCuerpo.cedula;
+        usuarioValido.sueldo = parametrosDeCuerpo.sueldo;
+        usuarioValido.fechaNacimiento = parametrosDeCuerpo.fechaNacimiento;
+        usuarioValido.fechaHoraNacimiento = parametrosDeCuerpo.fechaHoraNacimiento;
+
         try{
-            // Validacion con DTO
-            const respuesta = await this._usuarioService.crearUno(parametrosDeCuerpo)
-            return respuesta
+            const errores: ValidationError[] = await validate(usuarioValido);
+            if(errores.length>0){
+                console.error("Errrores", errores);
+                throw new BadRequestException("Error Validando");
+            } else {
+                let respuesta = await this._usuarioService.crearUno(parametrosDeCuerpo)
+                // return respuesta
+                const mensajeCorrecto = {
+                    mensaje : "Se creo correctamente"
+                }
+                return  mensajeCorrecto;
+            }
         } catch(e){
             console.error(e)
             throw new BadRequestException({
@@ -108,12 +129,32 @@ export class UsuarioController{
         @Body() parametrosCuerpo
     ){
         const id = Number(parametrosRuta.id);
-        const  usuarioEditado = parametrosCuerpo;
-        usuarioEditado.id = id;
+        parametrosCuerpo.id = id
+
+        // Validacion con DTO Update
+        let usuarioValido = new UsuarioUpdateDto();
+        usuarioValido.id =  parametrosCuerpo.id = id
+        usuarioValido.nombre = parametrosCuerpo.nombre
+        usuarioValido.apellido = parametrosCuerpo.apellido
+        usuarioValido.sueldo = parametrosCuerpo.sueldo
+        usuarioValido.fechaNacimiento = parametrosCuerpo.fechaNacimiento
+        usuarioValido.fechaHoraNacimiento = parametrosCuerpo.fechaHoraNacimiento
+
         try{
-            const respuesta = await this._usuarioService
-                .editarUno(usuarioEditado)
-            return  respuesta;
+            const errores: ValidationError[] = await validate(usuarioValido)
+            if(errores.length > 0){
+                console.error("Errrores", errores);
+                throw new BadRequestException("Error validando campos");
+            } else {
+                const respuesta = await this._usuarioService
+                    .editarUno(parametrosCuerpo)
+                //return  respuesta;
+                const mensajeCorrecto = {
+                    mensaje : "Se modifico correctamente"
+                }
+                return  mensajeCorrecto;
+            }
+            
         } catch (e){
             console.error(e)
             throw new InternalServerErrorException({
