@@ -10,7 +10,7 @@ import {VacunaModule} from "./vacuna/vacuna.module";
 import {MascotaEntity} from "./mascota/mascota.entity";
 import {VacunaEntity} from "./vacuna/vacuna.entity";
 
-const IP = "34.71.81.146";
+const IP = "35.184.89.59";
 
 
 @Module({
