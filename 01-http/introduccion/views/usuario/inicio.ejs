@@ -24,8 +24,14 @@
         <button>Crear</button>
     </a>
 <% if(typeof parametrosConsulta != "undefined") {%> 
-<p>MENSAJE: <%= parametrosConsulta.mensaje%> </p>
+    <p>MENSAJE: <%= parametrosConsulta.mensaje%> </p>
 <% } %> 
+
+<form action="/usuario/vista/inicio" method="GET">
+    <label for="busqueda">Busqueda: </label>
+    <input id="busqueda" type="text" name="busqueda">
+    <button type="submit">Buscar</button>
+</form>
     
 <table>
     <!-- table row -->
