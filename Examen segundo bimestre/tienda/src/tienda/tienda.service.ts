@@ -39,7 +39,7 @@ export class TiendaService {
         return this.repository.save(tienda);
     }
 
-    elimininarUno(id: number){
+    eliminarUno(id: number){
         return this.repository.delete(id);
     }
 }
