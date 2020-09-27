@@ -1,0 +1,49 @@
+<%- include("../compartido/estilos-generales/estilos-generales-component")%>
+<%- include("../compartido/menu/menu-component.ejs")%>
+
+<p>Crear nueva tienda</p>
+<a href="/tienda/vista/crear">
+    <button>Crear</button>
+</a>
+
+<form action="/tienda/vista/inicio" method="GET">
+    <label for="busqueda">Busqueda: </label>
+    <input id="busqueda" type="text" name="busqueda" value="<%= parametrosConsulta.busqueda %>">
+    <button type="submit">Buscar</button>
+</form>
+    
+<table>
+    <!-- table row -->
+    <tr>
+        <!-- table header -->
+        <th>Nombre</th>
+        <th>Ruc</th>
+        <th>Ubicacion</th>
+        <th>Tipo</th>
+        <th>Responsable</th>
+        <th>Dinero</th>
+    </tr>
+    
+    <% arregloTiendas.forEach((tienda) => { %>
+        <tr>
+            <!-- table details -->
+            <td><%= tienda.nombre %></td>
+            <td><%= tienda.ruc %></td>
+            <td><%= tienda.ubicacion %></td>
+            <td><%= tienda.tipo %></td>
+            <td><%= tienda.responsable %></td>
+            <td><%= tienda.dinero %></td>
+            <td>
+                <a href="/tienda/vista/editar/<%= tienda.id %>">
+                    <button>Editar</button>
+                </a>
+                <form action="/tienda/vista/eliminar/<%= tienda.id %>" method="POST">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+    <% }) %>
+
+</table>
+
+<%- include("../compartido/funcionalidad-general/funcionalidad-general-component")%>

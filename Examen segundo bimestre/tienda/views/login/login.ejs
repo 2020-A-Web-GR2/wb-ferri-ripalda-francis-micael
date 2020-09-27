@@ -1,0 +1,15 @@
+<h1>Ingreso CRUD Tiendas</h1>
+<% if(typeof error !== "undefined") {%>
+    <p>MENSAJE DE ERROR: <%= error %> </p>
+<%  }%>  
+<form action="/login" method="POST">
+    <label for="usuarioId">Usuario</label>
+    <input  id="usuarioId" 
+            type="text"
+            name="usuario">
+    <label for="passwordId">Password</label>
+    <input type="passwordId"
+            type="password"
+            name="password">
+    <button type="submit">Loguearse</button>
+</form>

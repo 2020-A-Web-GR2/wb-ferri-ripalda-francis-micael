@@ -1,0 +1,73 @@
+<%- include("../compartido/estilos-generales/estilos-generales-component")%>
+<%- include("../compartido/menu/menu-component")%>
+
+<% const existeTienda = typeof tienda != "undefined" %>
+
+
+<% let existeNombre = typeof nombre !== "undefined" %> 
+<% let existeRuc = typeof ruc !== "undefined" %> 
+<% let existeUbicacion = typeof ubicacion !== "undefined" %>
+<% let existeTipo = typeof tipo !== "undefined" %>
+<% let existeResponsable = typeof responsable !== "undefined" %>
+<% let existeDinero = typeof dinero !== "undefined" %>
+
+<h1><%= existeTienda ? "Editar" : "Crear"  %> Tienda </h1> 
+
+
+<% if(existeTienda) {%> 
+    <% existeNombre = true %> 
+    <% existeRuc = true %> 
+    <% existeUbicacion = true %> 
+    <% existeTipo = true %> 
+    <% existeResponsable = true %> 
+    <% existeDinero = true %> 
+
+    <% nombre = tienda.nombre %> 
+    <% ruc = tienda.ruc %> 
+    <% ubicacion = tienda.ubicacion %> 
+    <% tipo = tienda.tipo %> 
+    <% responsable = tienda.responsable %> 
+    <% dinero = tienda.dinero %> 
+<% } %> 
+
+<% if(typeof error !== "undefined") {%>
+    <p>MENSAJE DE ERROR: <%= error %> </p>
+<%  }%>  
+
+
+<form action="<%= existeTienda? '/tienda/editarDesdeVista/' + tienda.id : '/tienda/crearDesdeVista'%>" method="POST">
+        
+        <label for="nombreID">Nombre</label>
+        <input id="nombreID" type="text" name="nombre" value="<%= existeNombre? nombre : '' %>">
+    <br>
+
+    <label for="rucID">RUC</label>
+    <input id="rucID" type="text" 
+        <% if(existeTienda) {%>
+            disabled
+        <% } %>  
+        name="ruc" 
+        value="<%= existeRuc? ruc : '' %>">
+    <br>
+        
+    <label for="ubicacionID">Ubicacion</label>
+    <input id="ubicacionID" type="text" name="ubicacion" value="<%= existeUbicacion? ubicacion : '' %>">
+    <br>
+        
+    <label for="tipoID">Tipo</label>
+    <input id="tipoID" type="text" name="tipo" value="<%= existeTipo? tipo : '' %>">
+    <br>
+    
+    <label for="responsableID">Responsable</label>
+    <input id="responsableID" type="text" name="responsable" value="<%= existeResponsable? responsable : '' %>">
+    <br>
+    
+    <label for="dineroID">Dinero</label>
+    <input id="dineroID" type="number" step=".01" name="dinero" value="<%= existeDinero? dinero : '' %>">
+    <br>
+
+    <button type="submit">SUBMIT</button>
+    <button type="reset">RESET</button>
+</form>
+
+<%- include("../compartido/funcionalidad-general/funcionalidad-general-component")%>
